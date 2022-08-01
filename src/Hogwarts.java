@@ -9,5 +9,4 @@ public class Hogwarts {
         this.apparition = apparition;
     }
 
-
 }
