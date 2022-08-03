@@ -77,9 +77,24 @@ public class Hogwarts {
                     5, 4, 5, 5, 10)
     };
 
-   public int randomApparitionBest() {
-
+   public void randomMagicBest() {
+        int randomStudent1Magic = ravenclaws[2].getMagic();
+        int randomStudent2Magic = hufflepuffs[2].getMagic();
+       if (randomStudent1Magic > randomStudent2Magic) {
+           System.out.println(ravenclaws[1].getName() + " обладает бОльшей мощностью магии, чем " + hufflepuffs[2].getName());
+       }else {
+           System.out.println(hufflepuffs[2].getName() + " обладает бОльшей мощностью магии, чем " + ravenclaws[1].getName());
+       }
    }
+    public void randomApparitionBest() {
+        int randomStudent1Magic = ravenclaws[2].getApparition();
+        int randomStudent2Magic = hufflepuffs[2].getApparition();
+        if (randomStudent1Magic > randomStudent2Magic) {
+            System.out.println(ravenclaws[1].getName() + " обладает бОльшей дальностью трансгрессии, чем  " + hufflepuffs[2].getName());
+        } else {
+            System.out.println(hufflepuffs[2].getName() + " обладает бОльшей дальностью трансгрессии, чем  " + ravenclaws[1].getName());
+        }
+    }
 
     @Override
     public String toString() {
