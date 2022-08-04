@@ -12,12 +12,12 @@ public class Slytherin extends Hogwarts{
         this.lust4Power = lust4Power;
     }
     public void slytherinStudents() {
-        int slytherinStudents1 = slytherins[0].getCunning() + slytherins[0].getDetermination() + slytherins[0].getAmbition()+ getLust4Power();
-        int slytherinStudents2 = slytherins[2].getCunning() + slytherins[2].getDetermination() + slytherins[2].getAmbition()+ getLust4Power();
+        int slytherinStudents1 = GregoryGoil.getCunning() +GregoryGoil.getDetermination() + GregoryGoil.getAmbition()+ GregoryGoil.getLust4Power();
+        int slytherinStudents2 = GrahanMontegrue.getCunning() + GrahanMontegrue.getDetermination() + GrahanMontegrue.getAmbition()+ GrahanMontegrue.getLust4Power();
         if (slytherinStudents1 > slytherinStudents2) {
-            System.out.println(slytherins[0].getName() + " лучший студент, чем " + slytherins[2].getName());
+            System.out.println(GregoryGoil.getName() + " лучший студент, чем " + GrahanMontegrue.getName());
         } else {
-            System.out.println(slytherins[2].getName() + " лучший студент, чем " + slytherins[0].getName());
+            System.out.println(GrahanMontegrue.getName() + " лучший студент, чем " +GregoryGoil.getName());
         }
     }
 

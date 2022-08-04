@@ -3,21 +3,22 @@ public class Gryffindor extends  Hogwarts{
     private int honor;
     private int bravery;
 
-    public Gryffindor(int nobility, int honor, int bravery, String name, int magic, int apparition) {
+    public Gryffindor(String name, int magic, int apparition, int nobility, int honor, int bravery) {
         super(name, magic, apparition);
         this.nobility = nobility;
         this.honor = honor;
         this.bravery = bravery;
-
     }
 
+
+
     public void gryffindorStudents() {
-            int gryffindorStudent1 = gryffindors[0].getNobility() + gryffindors[0].getHonor() + gryffindors[0].getBravery();
-            int gryffindorStudent2 = gryffindors[1].getNobility() + gryffindors[1].getHonor() + gryffindors[1].getBravery();
+            int gryffindorStudent1 = HarryPotter.getNobility() + HarryPotter.getHonor() + HarryPotter.getBravery();
+            int gryffindorStudent2 = RonWeasley.getNobility() + RonWeasley.getHonor() + RonWeasley.getBravery();
             if (gryffindorStudent1 > gryffindorStudent2) {
-                System.out.println(gryffindors[0].getName() + " лучший студент, чем " + gryffindors[1].getName());
+                System.out.println(HarryPotter.getName() + " лучший студент, чем " +HarryPotter.getName());
             } else {
-                System.out.println(gryffindors[1].getName() + " лучший студент, чем " + gryffindors[0].getName());
+                System.out.println(RonWeasley.getName() + " лучший студент, чем " + RonWeasley.getName());
             }
         }
 

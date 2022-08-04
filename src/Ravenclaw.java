@@ -10,12 +10,12 @@ public class Ravenclaw extends Hogwarts{
         this.ingenuity = ingenuity;
     }
     public void ravenclawStudents() {
-        int ravenclawStudent1 = ravenclaws[1].getIntelligence() + ravenclaws[1].getCreativity() + ravenclaws[1].getIngenuity();
-        int ravenclawStudent2 = ravenclaws[2].getIntelligence() + ravenclaws[2].getCreativity() + ravenclaws[2].getIngenuity();
+        int ravenclawStudent1 = PadmePatil.getIntelligence() + PadmePatil.getCreativity() + PadmePatil.getIngenuity();
+        int ravenclawStudent2 = MarcusBelby.getIntelligence() + MarcusBelby.getCreativity() + MarcusBelby.getIngenuity();
         if (ravenclawStudent1 > ravenclawStudent2) {
-            System.out.println(ravenclaws[1].getName() + " лучший студент, чем " + ravenclaws[2].getName());
+            System.out.println(PadmePatil.getName() + " лучший студент, чем " + MarcusBelby.getName());
         } else {
-            System.out.println(ravenclaws[2].getName() + " лучший студент, чем " + ravenclaws[1].getName());
+            System.out.println(MarcusBelby.getName() + " лучший студент, чем " + PadmePatil.getName());
         }
     }
 

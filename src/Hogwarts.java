@@ -10,91 +10,40 @@ public class Hogwarts {
         this.magic = magic;
         this.apparition = apparition;
     }
-    static Gryffindor[] gryffindors = {
-            new Gryffindor(7,
-                    7,
-                    10,
-                    "Harry Potter",
-                    8,
-                    6),
-            new Gryffindor(5,
-                    7,
-                    5,
-                    "Ron Weasley",
-                    5,
-                    10),
 
-            new Gryffindor(8,
-                    7,
-                    7,
-                    "Hermione Granger",
-                    8,
-                    6)
-    };
-    static Slytherin[] slytherins = {
-            new Slytherin("Drako Malfoy",
-                    7, 10, 7, 8, 6,
-                    9),
-            new Slytherin("Graham Montegrue", 7, 5, 3, 5, 4, 3),
+    static Gryffindor HarryPotter = new Gryffindor("Harry Potter",7,7,9,8,9);
+    static Gryffindor RonWeasley = new Gryffindor("Ron Weasley", 5,6,7,7,6);
+    static Gryffindor HermioneGranger = new Gryffindor("Hermione Granger",9,8,8,7,7);
 
-            new Slytherin("Gregory Goil",
-                    3,
-                    5,
-                    5,
-                    3,
-                    4, 0)
-    };
-   static Ravenclaw[] ravenclaws = {
-            new Ravenclaw("Chou Jang",
-                    7,
-                    10,
-                    7,
-                    8,
-                    6),
+    static Slytherin DrakoMalfoy = new Slytherin("Drako Malfoy", 7,7,6,8,8,9);
+    static Slytherin GrahanMontegrue = new Slytherin("Graham Montegrue", 5,3,5,4,4,2);
+    static Slytherin GregoryGoil = new Slytherin("Gregory Goil", 4,5,6,4,3,2);
 
-            new Ravenclaw("Padme Patil",
-                    7,
-                    5,
-                    3,
-                    5,
-                    4),
+    static Ravenclaw ChouJang = new Ravenclaw("Chou Jang",5,5,6,5,6);
+    static Ravenclaw PadmePatil = new Ravenclaw("Padme Patil", 5,6,6,7,6);
+    static Ravenclaw MarcusBelby = new Ravenclaw("Marcus Belby", 6,5,7,6,5);
 
-            new Ravenclaw("Marcus Belby",
-                    7,
-                    7,
-                    5,
-                    8,
-                    10)
-    };
-   static Hufflepuff[] hufflepuffs = {
-            new Hufflepuff("Zakharia Smith",
-                    7, 10, 7, 8, 6),
+    static Hufflepuff ZakhariaSmith = new Hufflepuff("Zakharia Smith",7,6,6,5,7);
+    static Hufflepuff SedrickDiggori = new Hufflepuff("Sedrick Diggori", 8,7,8,8,8);
+    static Hufflepuff JustinFinchFletchli = new Hufflepuff("Justin Finch-Fletchli", 6,5,7,6,7);
 
-            new Hufflepuff("Sedrick Diggori",
-                    7, 8, 6, 8, 7),
 
-            new Hufflepuff("Justin Finch-Fletchli",
-                    5, 4, 5, 5, 10)
-    };
 
-   public void randomMagicBest() {
-        int randomStudent1Magic = ravenclaws[2].getMagic();
-        int randomStudent2Magic = hufflepuffs[2].getMagic();
+   public void randomStudentBest() {
+        int randomStudent1Magic = ZakhariaSmith.getMagic();
+        int randomStudent2Magic = DrakoMalfoy.getMagic();
+       int randomStudent1Apparatition =ZakhariaSmith.getApparition();
+       int randomStudent2Apparatition = DrakoMalfoy.getApparition();
        if (randomStudent1Magic > randomStudent2Magic) {
-           System.out.println(ravenclaws[1].getName() + " обладает бОльшей мощностью магии, чем " + hufflepuffs[2].getName());
-       }else {
-           System.out.println(hufflepuffs[2].getName() + " обладает бОльшей мощностью магии, чем " + ravenclaws[1].getName());
+           System.out.println(ZakhariaSmith.getName() + " обладает бОльшей мощностью магии, чем " +DrakoMalfoy.getMagic());
+           System.out.println(DrakoMalfoy.getMagic() + " обладает бОльшей мощностью магии, чем " + ZakhariaSmith.getName());
+       }else if (randomStudent1Magic > randomStudent2Magic) {
+           System.out.println(ZakhariaSmith.getName() + " обладает бОльшей дальностью трансгрессии, чем  " + DrakoMalfoy.getName());
+       } else {
+           System.out.println(DrakoMalfoy.getName() + " обладает бОльшей дальностью трансгрессии, чем  " +ZakhariaSmith.getName());
        }
    }
-    public void randomApparitionBest() {
-        int randomStudent1Magic = ravenclaws[2].getApparition();
-        int randomStudent2Magic = hufflepuffs[2].getApparition();
-        if (randomStudent1Magic > randomStudent2Magic) {
-            System.out.println(ravenclaws[1].getName() + " обладает бОльшей дальностью трансгрессии, чем  " + hufflepuffs[2].getName());
-        } else {
-            System.out.println(hufflepuffs[2].getName() + " обладает бОльшей дальностью трансгрессии, чем  " + ravenclaws[1].getName());
-        }
-    }
+
 
     @Override
     public String toString() {
@@ -102,10 +51,6 @@ public class Hogwarts {
                 "name='" + name + '\'' +
                 ", magic=" + magic +
                 ", apparition=" + apparition +
-                ", gryffindors=" + Arrays.toString(gryffindors) +
-                ", slytherins=" + Arrays.toString(slytherins) +
-                ", ravenclaws=" + Arrays.toString(ravenclaws) +
-                ", hufflepuffs=" + Arrays.toString(hufflepuffs) +
                 '}';
     }
 
@@ -113,56 +58,59 @@ public class Hogwarts {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getMagic() {
         return magic;
-    }
-
-    public void setMagic(int magic) {
-        this.magic = magic;
     }
 
     public int getApparition() {
         return apparition;
     }
 
-    public void setApparition(int apparition) {
-        this.apparition = apparition;
+    public Gryffindor getHarryPotter() {
+        return HarryPotter;
     }
 
-    public Gryffindor[] getGryffindors() {
-        return gryffindors;
+    public Gryffindor getRonWeasley() {
+        return RonWeasley;
     }
 
-    public void setGryffindors(Gryffindor[] gryffindors) {
-        this.gryffindors = gryffindors;
+    public Gryffindor getHermioneGranger() {
+        return HermioneGranger;
     }
 
-    public Slytherin[] getSlytherins() {
-        return slytherins;
+    public Slytherin getDrakoMalfoy() {
+        return DrakoMalfoy;
     }
 
-    public void setSlytherins(Slytherin[] slytherins) {
-        this.slytherins = slytherins;
+    public Slytherin getGrahanMontegrue() {
+        return GrahanMontegrue;
     }
 
-    public Ravenclaw[] getRavenclaws() {
-        return ravenclaws;
+    public Slytherin getGregoryGoil() {
+        return GregoryGoil;
     }
 
-    public void setRavenclaws(Ravenclaw[] ravenclaws) {
-        this.ravenclaws = ravenclaws;
+    public Ravenclaw getChouJang() {
+        return ChouJang;
     }
 
-    public Hufflepuff[] getHufflepuffs() {
-        return hufflepuffs;
+    public Ravenclaw getPadmePatil() {
+        return PadmePatil;
     }
 
-    public void setHufflepuffs(Hufflepuff[] hufflepuffs) {
-        this.hufflepuffs = hufflepuffs;
+    public Ravenclaw getMarcusBelby() {
+        return MarcusBelby;
     }
 
+    public Hufflepuff getZakhariaSmith() {
+        return ZakhariaSmith;
+    }
+
+    public Hufflepuff getSedrickDiggori() {
+        return SedrickDiggori;
+    }
+
+    public Hufflepuff getJustinFinchFletchli() {
+        return JustinFinchFletchli;
+    }
 }
