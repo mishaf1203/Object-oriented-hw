@@ -30,8 +30,8 @@ public class Hogwarts {
 
 
    public void randomStudentBest() {
-        int randomStudent1Magic = ZakhariaSmith.getMagic();
-        int randomStudent2Magic = DrakoMalfoy.getMagic();
+        int randomStudent1Magic = Hufflepuff.ZakhariaSmith.getMagic();
+        int randomStudent2Magic = Slytherin.DrakoMalfoy.getMagic();
        int randomStudent1Apparatition =ZakhariaSmith.getApparition();
        int randomStudent2Apparatition = DrakoMalfoy.getApparition();
        if (randomStudent1Magic > randomStudent2Magic) {
