@@ -11,26 +11,8 @@ public class Hogwarts {
         this.apparition = apparition;
     }
 
-    static Gryffindor HarryPotter = new Gryffindor("Harry Potter",7,7,9,8,9);
-    static Gryffindor RonWeasley = new Gryffindor("Ron Weasley", 5,6,7,7,6);
-    static Gryffindor HermioneGranger = new Gryffindor("Hermione Granger",9,8,8,7,7);
-
-    static Slytherin DrakoMalfoy = new Slytherin("Drako Malfoy", 7,7,6,8,8,9);
-    static Slytherin GrahanMontegrue = new Slytherin("Graham Montegrue", 5,3,5,4,4,2);
-    static Slytherin GregoryGoil = new Slytherin("Gregory Goil", 4,5,6,4,3,2);
-
-    static Ravenclaw ChouJang = new Ravenclaw("Chou Jang",5,5,6,5,6);
-    static Ravenclaw PadmePatil = new Ravenclaw("Padme Patil", 5,6,6,7,6);
-    static Ravenclaw MarcusBelby = new Ravenclaw("Marcus Belby", 6,5,7,6,5);
-
-    static Hufflepuff ZakhariaSmith = new Hufflepuff("Zakharia Smith",7,6,6,5,7);
-    static Hufflepuff SedrickDiggori = new Hufflepuff("Sedrick Diggori", 8,7,8,8,8);
-    static Hufflepuff JustinFinchFletchli = new Hufflepuff("Justin Finch-Fletchli", 6,5,7,6,7);
-
-
-
    public void randomStudentBest() {
-        int randomStudent1Magic = Hufflepuff.ZakhariaSmith.getMagic();
+        int randomStudent1Magic = .ZakhariaSmith.getMagic();
         int randomStudent2Magic = Slytherin.DrakoMalfoy.getMagic();
        int randomStudent1Apparatition =ZakhariaSmith.getApparition();
        int randomStudent2Apparatition = DrakoMalfoy.getApparition();
