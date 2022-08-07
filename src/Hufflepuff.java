@@ -9,7 +9,7 @@ public class Hufflepuff extends Hogwarts{
         this.loyalty = loyalty;
         this.honesty = honesty;
     }
-    public void hufflepuffsStudents() {
+    public void hufflepuffsStudents(Hufflepuff SedrickDiggori, Hufflepuff ZakhariaSmith) {
         int hufflepuffsStudent1 = SedrickDiggori.getDiligence() + SedrickDiggori.getLoyalty() +SedrickDiggori.getHonesty();
         int hufflepuffsStudent2 = ZakhariaSmith.getDiligence() + ZakhariaSmith.getLoyalty() + ZakhariaSmith.getHonesty();
         if (hufflepuffsStudent1 > hufflepuffsStudent2) {

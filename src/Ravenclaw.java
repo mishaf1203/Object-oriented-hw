@@ -9,7 +9,7 @@ public class Ravenclaw extends Hogwarts{
         this.creativity = creativity;
         this.ingenuity = ingenuity;
     }
-    public void ravenclawStudents() {
+    public void ravenclawStudents(Ravenclaw PadmePatil, Ravenclaw MarcusBelby) {
         int ravenclawStudent1 = PadmePatil.getIntelligence() + PadmePatil.getCreativity() + PadmePatil.getIngenuity();
         int ravenclawStudent2 = MarcusBelby.getIntelligence() + MarcusBelby.getCreativity() + MarcusBelby.getIngenuity();
         if (ravenclawStudent1 > ravenclawStudent2) {

@@ -12,7 +12,7 @@ public class Gryffindor extends  Hogwarts{
 
 
 
-    public void gryffindorStudents() {
+    public void gryffindorStudents(Gryffindor HarryPotter, Gryffindor RonWeasley) {
             int gryffindorStudent1 = HarryPotter.getNobility() + HarryPotter.getHonor() + HarryPotter.getBravery();
             int gryffindorStudent2 = RonWeasley.getNobility() + RonWeasley.getHonor() + RonWeasley.getBravery();
             if (gryffindorStudent1 > gryffindorStudent2) {

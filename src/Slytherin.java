@@ -11,7 +11,7 @@ public class Slytherin extends Hogwarts{
         this.ambition = ambition;
         this.lust4Power = lust4Power;
     }
-    public void slytherinStudents() {
+    public void slytherinStudents(Slytherin GregoryGoil, Slytherin GrahanMontegrue) {
         int slytherinStudents1 = GregoryGoil.getCunning() +GregoryGoil.getDetermination() + GregoryGoil.getAmbition()+ GregoryGoil.getLust4Power();
         int slytherinStudents2 = GrahanMontegrue.getCunning() + GrahanMontegrue.getDetermination() + GrahanMontegrue.getAmbition()+ GrahanMontegrue.getLust4Power();
         if (slytherinStudents1 > slytherinStudents2) {
